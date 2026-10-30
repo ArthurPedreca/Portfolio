@@ -1,0 +1,80 @@
+<!-- title: Client records readable with the public key -->
+<!-- desc: Postmortem of a security audit on a 60,000-line Lovable and Supabase booking platform: five critical exposures, closed before launch. -->
+<p class="crumbs"><a href="../">status</a> / <a href="../#history">history</a> / open-database</p>
+
+<div class="art-head">
+  <p class="eyebrow"><span class="tag">RESOLVED</span>&nbsp;&nbsp;Incident · October 2026</p>
+  <h1>Client records readable with the public key</h1>
+  <p class="lead">A booking platform built with an AI tool looked finished. Behind the polished interface, anyone holding the app’s public key could read its clients, appointments and payments.</p>
+  <div class="facts-row">
+    <div>Product<b>Booking and client management</b></div>
+    <div>Built with<b>Lovable · React, Vite, Supabase</b></div>
+    <div>Size<b>About 60,000 lines</b></div>
+    <div>Found<b>5 critical exposures</b></div>
+    <div>Client<b>Withheld</b></div>
+  </div>
+</div>
+
+<div class="art">
+  <article>
+    <h2>Summary</h2>
+    <p>The platform was getting ready to launch. In a Supabase app the public key ships to every visitor’s browser by design, so it is not a secret. The only thing standing between that key and the data is the set of row level security policies on each table, and the access rules on each storage bucket.</p>
+    <p>Here those rules were open. Four tables and every storage bucket answered to the public key alone, with no login. <strong>All five were closed before a single real user signed up.</strong></p>
+
+    <h2>Status updates</h2>
+    <ol class="updates">
+      <li class="g"><h3>Resolved</h3><p>Every table and bucket now refuses the public key on its own. Closed before launch.</p></li>
+      <li class="y"><h3>Fix</h3><p>Each table got a role-based policy that limits rows to the business they belong to. Every bucket went private, with files served through signed URLs that expire.</p></li>
+      <li class="r"><h3>Identified</h3><p>With only the public key and no login, <code>clients</code>, <code>appointments</code>, <code>payments</code> and <code>intake_forms</code> returned every row. Every storage bucket was public.</p></li>
+      <li><h3>Investigating</h3><p>Tested every table and bucket the way an outsider would: no password, only what any visitor’s browser already has.</p></li>
+    </ol>
+
+    <h2>What was exposed</h2>
+    <div class="table" role="table" aria-label="Exposed resources">
+      <div class="trow th" role="row"><span role="columnheader">Resource</span><span role="columnheader">Before</span><span role="columnheader">After</span></div>
+      <div class="trow" role="row"><code>clients</code><span class="tag red">PUBLIC</span><span>Only the business that owns the row</span></div>
+      <div class="trow" role="row"><code>appointments</code><span class="tag red">PUBLIC</span><span>Only the business that owns the row</span></div>
+      <div class="trow" role="row"><code>payments</code><span class="tag red">PUBLIC</span><span>Only the business that owns the row</span></div>
+      <div class="trow" role="row"><code>intake_forms</code><span class="tag red">PUBLIC</span><span>Only the business that owns the row</span></div>
+      <div class="trow" role="row"><code>storage buckets</code><span class="tag red">PUBLIC</span><span>Private, signed URLs</span></div>
+    </div>
+
+    <h2>Root cause</h2>
+    <p>The policies were written so the app would work, not so each business’s data stayed separate. A rule like <code>using (true)</code> makes a table readable to anyone, and nothing looks wrong from the inside, because the interface only ever asks for what it is about to show.</p>
+    <p>This is the most common hole I see in apps built with AI tools. The screens are right, the demo is right, and the database is wide open.</p>
+
+    <h2>The fix</h2>
+    <div class="diff">
+      <div class="fn">policies/clients.sql · simplified</div>
+<pre><span>create policy "read clients" on clients for select</span><span class="del">-  using (true);</span><span class="add">+  using (business_id in (select my_businesses()));</span></pre>
+    </div>
+    <p style="margin-top:16px">The same pattern went onto the other three tables. For files, the buckets were made private and the app now asks for a short-lived signed URL when it needs to show one.</p>
+
+    <h2>What I check in every audit</h2>
+    <ul>
+      <li>Row level security on every table, tested with the public key</li>
+      <li>Public storage buckets and file links</li>
+      <li>Secret keys shipped to the browser</li>
+      <li>Roles enforced on the server, not only hidden in the interface</li>
+      <li>Payments, webhooks and edge functions, for apps that take money</li>
+    </ul>
+
+    <div class="next">
+      <a href="../#history"><svg class="i"><use href="#back"/></svg> Back<b>All history</b></a>
+      <a href="foxie.html" style="text-align:right">Next <svg class="i"><use href="#arrow"/></svg><b>Foxie, an AI concierge</b></a>
+    </div>
+  </article>
+
+  <aside>
+    <div class="box">
+      <h4>Not sure about your own app?</h4>
+      <p>The audit needs read access only. I never need your passwords, and you get every issue ranked, with proof and the exact fix.</p>
+      <dl>
+        <dt>Service</dt><dd>Security audit and fix</dd>
+        <dt>Price</dt><dd>From $99, fixed</dd>
+        <dt>Delivery</dt><dd>2 to 7 days</dd>
+      </dl>
+      <a class="btn primary" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">Book an audit on Upwork</a>
+    </div>
+  </aside>
+</div>
