@@ -3,246 +3,215 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arthur Pedreca · status</title>
-<meta name="description" content="Full-stack developer in São Paulo. I take apps built with Lovable, Bolt, Replit and Cursor to production, close their security holes and keep them running.">
-<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b0e12" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="Arthur Pedreca · status">
-<meta property="og:description" content="Your AI-built app, kept up and locked down.">
+<title>Arthur Pedreca finishes apps AI started</title>
+<meta name="description" content="Full-stack developer in São Paulo. I take apps built with Lovable, Bolt, Replit or Cursor to production: fixed, locked down and live.">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="Arthur Pedreca finishes apps AI started">
+<meta property="og:description" content="I find what the AI got wrong, fix it, lock it down and put it live.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://arthurpedreca.github.io/Portfolio/">
 <meta property="og:image" content="https://arthurpedreca.github.io/Portfolio/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></symbol>
-  <symbol id="out" viewBox="0 0 16 16"><path d="M5 11 11 5M6 5h5v5"/></symbol>
 </svg>
 
 <header class="nav">
-  <div class="wrap">
-    <a class="brand" href="./"><span class="logo">ap</span>Arthur Pedreca <span class="sub">/ status</span></a>
-    <nav class="links" aria-label="Sections">
-      <a href="#history">History</a>
-      <a href="#services">Services</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+  <div class="nav-left">
+    <a class="wordmark" href="./">Arthur Pedreca</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#prices">Prices</a>
+      <a href="#about">About</a>
     </nav>
-    <a class="pill" href="#contact"><i class="dot"></i><span data-k="note">Available for new projects</span></a>
+  </div>
+  <div class="nav-left">
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav class="menu-sheet" aria-label="Sections">
+        <a href="#readable">The audit</a>
+        <a href="#work">Work</a>
+        <a href="#prices">Prices</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </details>
+    <a class="action" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">Hire me on Upwork</a>
   </div>
 </header>
 
 <main>
-  <div class="hero">
-    <div class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <div class="prints">
+      <figure class="print print-large" data-rise style="--i:1">
+        <img class="shot" src="assets/img/arthur-45.webp" width="640" height="800" alt="Arthur Pedreca, arms crossed, looking to the side.">
+      </figure>
+      <figure class="print print-small" data-rise style="--i:2">
+        <div class="frames" id="frames">
+          <img class="on" src="assets/img/app-sq.webp" width="738" height="738" alt="The Flexiestays app home screen, with Bournemouth behind the search bar.">
+          <img src="assets/img/foxie-sq.webp" width="500" height="500" alt="Foxie answering with property cards for Tower House and Cliff Heights.">
+          <img src="assets/img/property-sq.webp" width="500" height="500" alt="A Flexiestays apartment on the website: a bedroom with palm-leaf cushions.">
+        </div>
+        <figcaption>Flexiestays, Bournemouth. I run the app, the website and Foxie.</figcaption>
+      </figure>
+    </div>
+    <h1 class="hero-title" id="title" data-rise style="--i:3">Arthur Pedreca finishes apps AI&nbsp;started</h1>
+    <p class="hero-line" data-rise style="--i:4">Built it with Lovable, Bolt, Replit or Cursor? I find what the AI got wrong, fix it, lock it down and put it live.<span class="booked" data-k="booked" hidden></span></p>
+  </section>
+
+  <section class="split" id="readable" aria-labelledby="readable-title">
+    <div class="field-dark">
+      <div class="input-block">
+        <pre class="policy" data-reveal><code><span class="kw">create policy</span> "read clients"
+  <span class="kw">on</span> clients <span class="kw">for select</span>
+  <span class="kw">using</span> (<span id="rule" class="rule" contenteditable="plaintext-only" role="textbox" aria-label="Policy rule, editable" aria-describedby="verdict" spellcheck="false" autocapitalize="off">true</span>);</code></pre>
+        <div class="fix-row" data-reveal style="--i:1">
+          <button type="button" id="fix">Apply the fix</button>
+          <button type="button" id="undo" hidden>Put the bug back</button>
+        </div>
+        <p class="verdict" id="verdict" aria-live="polite" data-reveal style="--i:2">A 60,000-line booking platform built with Lovable had this rule on four tables. <strong>Anyone holding the app’s public key could read every row.</strong></p>
+      </div>
+      <h2 class="split-head" id="readable-title">Readable by <span class="sr-only" data-k="who-sr">anyone</span></h2>
+    </div>
+    <div class="field-lit">
+      <div class="output-block" data-reveal style="--i:1">
+        <div class="req" data-ui>
+          <div class="req-head"><code class="verb">GET</code><code>/rest/v1/clients?select=*</code></div>
+          <div class="req-meta">From a stranger’s browser · public key · no login</div>
+          <div class="req-status"><span><span class="ok">200 OK</span></span><span data-k="rows">4 rows</span></div>
+          <div id="rows">
+            <table>
+              <thead><tr><th>id</th><th>name</th><th class="col-phone">phone</th><th>last visit</th></tr></thead>
+              <tbody>
+                <tr><td>0142</td><td>Ana R.</td><td class="col-phone">+55 11 9•••• ••21</td><td>12 Oct</td></tr>
+                <tr class="hl"><td>0143</td><td>Bruno T.</td><td class="col-phone">+55 11 9•••• ••07</td><td>14 Oct</td></tr>
+                <tr><td>0144</td><td>Carla M.</td><td class="col-phone">+55 21 9•••• ••88</td><td>15 Oct</td></tr>
+                <tr><td>0145</td><td>Diego S.</td><td class="col-phone">+55 11 9•••• ••39</td><td>17 Oct</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="empty" id="none" hidden><code>[]</code> 0 rows. The policy refused the stranger.</div>
+        </div>
+        <p class="note">Sample rows, not client data. The real ones never left the audit.</p>
+      </div>
+      <p class="split-head" aria-hidden="true" data-k="who">anyone</p>
+    </div>
+  </section>
+
+  <section class="work wrap" id="work" aria-labelledby="work-title">
+    <h2 id="work-title" data-reveal>Work</h2>
+
+    <figure class="grid piece side">
+      <div class="shutter p-wide" data-reveal><img class="shot" src="assets/img/site.webp" width="1427" height="951" alt="The Flexiestays home page: Bournemouth Hotels and Serviced Apartments, a booking search over a photo of the pier, and a Tower House apartment below."></div>
+      <figcaption class="side-text" data-reveal style="--i:1"><h3>Flexiestays website</h3><p>Bookings for serviced apartments in Bournemouth. Nuxt, tested end to end with Cypress.</p></figcaption>
+    </figure>
+
+    <div class="grid pair">
+      <p class="remark" data-reveal>I fix production apps because I run one every day.</p>
+      <figure class="piece p-right" data-reveal>
+        <figcaption class="name">Flexiestays app</figcaption>
+        <div class="shutter" data-reveal><img class="shot" src="assets/img/app.webp" width="738" height="922" alt="The Flexiestays app home screen with a destination search and the Tower House card."></div>
+        <p class="desc">Flutter, for iOS and Android, tested with Patrol.</p>
+      </figure>
+    </div>
+
+    <div class="grid">
+      <figure class="piece p-inset" data-reveal>
+        <figcaption class="name">Foxie</figcaption>
+        <div class="shutter" data-reveal><img class="shot" src="assets/img/foxie-wide.webp" width="799" height="449" alt="Foxie answering “Help me find accommodation” with two property cards, Tower House and Cliff Heights, each with its apartments."></div>
+        <p class="desc">An AI concierge for Flexiestays. Guests ask in plain English and get live property cards. <a class="link" href="history/foxie.html">How it works</a></p>
+      </figure>
+    </div>
+
+    <figure class="grid piece side flip">
+      <figcaption class="side-text" data-reveal style="--i:1"><h3>GitHub, the last 90 days</h3><p>Every lit square is a day I shipped: <span data-k="active">57</span> of the last 90. It updates itself every six hours.</p></figcaption>
+      <div class="p-wide" data-reveal>
+        <div class="gh" data-ui role="img" id="gh" aria-label="GitHub contribution calendar for the last 90 days">
+          <div class="gh-top"><span><b data-k="sum90">349</b> contributions</span><span data-k="range">Aug – Oct 2026</span></div>
+          <div class="gh-grid" id="gh-grid"></div>
+          <div class="gh-foot"><span>ArthurPedreca</span><span class="gh-legend">Less <i style="background:#151b23"></i><i style="background:#033a16"></i><i style="background:#196c2e"></i><i style="background:#2ea043"></i><i style="background:#56d364"></i> More</span></div>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <section class="prices wrap grid" id="prices" aria-labelledby="prices-title">
+    <div class="prices-side"><h2 id="prices-title" data-reveal>Prices</h2><p class="prices-intro" data-reveal style="--i:1">Fixed prices, booked through <a class="link" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">Upwork</a>. Every package starts with read access to your project. I never need your passwords.</p><p class="prices-intro muted" data-reveal style="--i:2">Bigger or ongoing work is quoted after I’ve looked at the project.</p></div>
+    <div class="menu-cols">
       <div>
-        <p class="eyebrow">Full-stack developer · São Paulo · UTC−3</p>
-        <h1>Your AI-built app, <span>kept up and locked down.</span></h1>
-        <p class="lead">I take apps made with Lovable, Bolt, Replit and Cursor to production, close the security holes they ship with, and keep them running after launch. Day to day, I’m the lead developer at Flexiestays in the UK.</p>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Open an incident <svg class="i"><use href="#arrow"/></svg></a>
-          <a class="btn" href="history/open-database.html">Read the postmortem</a>
+        <div class="group" data-reveal>
+          <h3>Security audit and fix</h3>
+          <div class="item"><div class="row"><span>Security report</span><span>$99</span></div><p>Row level security, storage, keys and auth on up to 10 tables. Every issue ranked, with its fix. Two days.</p></div>
+          <div class="item"><div class="row"><span>Audit and fixes</span><span>299</span></div><p>The report, plus every critical and high issue fixed and tested again. Four days.</p></div>
+          <div class="item"><div class="row"><span>Launch hardening</span><span>599</span></div><p>Up to 30 tables, payments and webhooks checked, and a 30-minute call. Seven days.</p></div>
         </div>
-        <div class="meta">
-          <div><b data-k="total">2,742</b>contributions<br>in the last year</div>
-          <div><b>5</b>critical exposures<br>closed in one audit</div>
-          <div><b>&lt; 24h</b>first reply on<br>new projects</div>
-        </div>
-      </div>
-
-      <div class="panel" aria-label="Current status">
-        <div class="ph">Current status <span data-k="updated">updated 30 Oct, 13:25</span></div>
-        <div class="banner"><i class="bd"></i><span data-k="banner">All systems operational</span></div>
-        <div class="activity">
-          <div class="ah">Shipping activity <span class="small">last 90 days</span></div>
-          <div class="bars" id="bars" role="img" aria-label="Commit activity for the last 90 days"></div>
-          <div class="axis small"><span data-k="from">2 Aug</span><span>today</span></div>
-          <p class="summary"><span data-k="active">55 of 90</span> days active · <span data-k="sum90">345</span> contributions</p>
-        </div>
-        <div class="comp">
-          <div class="cr"><span>Security audits <em>from $99</em></span><span class="st">Accepting projects</span></div>
-          <div class="cr"><span>Production rescue <em>from $79</em></span><span class="st">Accepting projects</span></div>
-          <div class="cr"><span>AI chatbots &amp; agents <em>from $119</em></span><span class="st">Accepting projects</span></div>
-          <div class="cr"><span>Flexiestays <em>UK</em></span><span class="st blue">In production</span></div>
-          <div class="cr"><span>Aisbar <em>Brazil</em></span><span class="st amber">In development</span></div>
+        <div class="group" data-reveal>
+          <h3>Production rescue</h3>
+          <div class="item"><div class="row"><span>Deploy fix</span><span>$79</span></div><p>One failing deploy fixed: build, environment variables or routing. Two days.</p></div>
+          <div class="item"><div class="row"><span>Go-live</span><span>349</span></div><p>Deployed, with domain, login and emails working, and up to five bugs fixed. Five days.</p></div>
+          <div class="item"><div class="row"><span>Production setup</span><span>799</span></div><p>Stripe, staging and production, automatic deploys, error monitoring, up to 12 bugs. Ten days.</p></div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <section id="history">
-    <div class="wrap">
-      <div class="sh">
-        <div>
-          <p class="kicker">History</p>
-          <h2>Incidents I closed, things I shipped</h2>
-          <p>Written the way a status page would: what broke or what changed, what I did, and where it stands now. Client names are withheld unless they agreed otherwise.</p>
-        </div>
-      </div>
-
-      <h3 class="month">October 2026</h3>
-      <a class="inc" href="history/open-database.html">
-        <div>
-          <h3>Client records readable with the public key <span class="tag">RESOLVED</span></h3>
-          <p>A booking and client-management platform built with Lovable on Supabase, about 60,000 lines, was getting ready to launch. Clients, appointments, payments, intake forms and every stored file could be read by anyone holding the app’s public key.</p>
-          <span class="more">Read the postmortem <svg class="i"><use href="#arrow"/></svg></span>
-        </div>
-        <ol class="steps">
-          <li class="r"><b>Identified</b>Four tables and the storage buckets open to the public key.</li>
-          <li class="y"><b>Fix</b>Role-based row level security on every table, private buckets with signed URLs.</li>
-          <li class="g"><b>Resolved</b>Closed before a single real user signed up.</li>
-        </ol>
-      </a>
-
-      <h3 class="month">2026</h3>
-      <a class="inc release" href="history/foxie.html">
-        <div>
-          <h3>Foxie, an AI concierge for Flexiestays <span class="tag blue">SHIPPED</span></h3>
-          <p>Guests ask in plain English and Foxie answers with live property cards, apartment photos and quick actions, right inside the chat. Built with the Vercel AI SDK, using tool calling and generative UI.</p>
-          <span class="more">Read the release notes <svg class="i"><use href="#arrow"/></svg></span>
-        </div>
-        <ol class="steps">
-          <li class="b"><b>Ask</b>“Help me find accommodation”</li>
-          <li class="b"><b>Tool call</b>Foxie looks up the properties and their apartments.</li>
-          <li class="g"><b>Answer</b>Cards the guest can tap, instead of a wall of text.</li>
-        </ol>
-      </a>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="wrap">
-      <div class="sh">
-        <div>
-          <p class="kicker">Services</p>
-          <h2>Fixed-price work, booked through Upwork</h2>
-          <p>Each one starts small, so you know exactly what’s wrong before paying for more.</p>
-        </div>
-      </div>
-      <div class="svc">
-        <div class="srow">
-          <div><h3>Security audit and fix</h3><p class="d">For apps built with Lovable, Bolt or Supabase. Row level security, storage, exposed keys and auth, checked the way an outsider would.</p></div>
-          <div class="tiers">
-            <div class="tier"><span>Security report</span><b>$99</b><small>2 days</small></div>
-            <div class="tier"><span>Audit + fixes</span><b>$299</b><small>4 days</small></div>
-            <div class="tier"><span>Launch hardening</span><b>$599</b><small>7 days</small></div>
-          </div>
-          <a class="go" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">On Upwork <svg class="i"><use href="#out"/></svg></a>
-        </div>
-        <div class="srow">
-          <div><h3>Production rescue</h3><p class="d">Your AI-built app fixed, deployed and ready for real users: failing builds, domains, logins, emails and Stripe.</p></div>
-          <div class="tiers">
-            <div class="tier"><span>Deploy fix</span><b>$79</b><small>2 days</small></div>
-            <div class="tier"><span>Go-live</span><b>$349</b><small>5 days</small></div>
-            <div class="tier"><span>Production setup</span><b>$799</b><small>10 days</small></div>
-          </div>
-          <a class="go" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">On Upwork <svg class="i"><use href="#out"/></svg></a>
-        </div>
-        <div class="srow">
-          <div><h3>AI chatbots and agents</h3><p class="d">A chatbot that answers from your own content, captures leads and hands over to a person when it isn’t sure. Claude or OpenAI.</p></div>
-          <div class="tiers">
-            <div class="tier"><span>FAQ chatbot</span><b>$119</b><small>4 days</small></div>
-            <div class="tier"><span>Lead chatbot</span><b>$349</b><small>7 days</small></div>
-            <div class="tier"><span>AI agent</span><b>$799</b><small>14 days</small></div>
-          </div>
-          <a class="go" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">On Upwork <svg class="i"><use href="#out"/></svg></a>
-        </div>
-      </div>
-      <p class="note">Bigger or ongoing work is quoted separately. Send me a message with what you need.</p>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="wrap">
-      <div class="sh">
-        <div>
-          <p class="kicker">Experience</p>
-          <h2>Where I’ve been running things</h2>
-        </div>
-      </div>
-      <div class="exp">
-        <div>
-          <div class="job">
-            <p class="when">Jan 2025 → now</p>
-            <div>
-              <h3>Flexiestays <span>Lead developer</span> <span class="st blue">In production</span></h3>
-              <p>Serviced apartments in Bournemouth, UK. I own the product end to end: the Nuxt website with Cypress tests, the Flutter app tested with Patrol, the internal dashboards and Foxie. I also run the SEO and performance checks and look after DNS and domains.</p>
-            </div>
-          </div>
-          <div class="job">
-            <p class="when">Ongoing</p>
-            <div>
-              <h3>Aisbar <span>Health tech, Brazil</span> <span class="st amber">In development</span></h3>
-              <p>A tool that helps ICU doctors hand over their patients at shift change.</p>
-            </div>
-          </div>
-          <div class="job">
-            <p class="when">Previously</p>
-            <div><h3>CrownStone <span>Frontend developer</span></h3></div>
-          </div>
-          <div class="job">
-            <p class="when">Previously</p>
-            <div><h3>Sorria Bank <span>Programmer</span></h3></div>
-          </div>
-          <div class="job">
-            <p class="when">2025 → 2027</p>
-            <div><h3>FIAP <span>Bachelor’s in Artificial Intelligence</span></h3><p>In progress.</p></div>
-          </div>
-        </div>
-
-        <div class="deps">
-          <div class="ph">Dependencies <span>what I build with</span></div>
-          <div class="dep"><span>Front end</span>React, Next.js, Vue, Nuxt, TypeScript, Tailwind</div>
-          <div class="dep"><span>Back end</span>Node.js, Laravel, Supabase, PostgreSQL</div>
-          <div class="dep"><span>Mobile</span>Flutter</div>
-          <div class="dep"><span>AI</span>Vercel AI SDK, Claude, OpenAI, Claude Code</div>
-          <div class="dep"><span>Testing</span>Cypress, Patrol</div>
-          <div class="dep"><span>Hosting</span>Vercel, Netlify, Supabase</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap contact">
       <div>
-        <p class="kicker">Contact</p>
-        <h2>Something broken?<br><span>Open an incident.</span></h2>
-        <p class="lead">Send me the project link and what’s wrong. I’ll tell you honestly whether it’s a quick fix or needs more, before you pay for anything bigger.</p>
-      </div>
-      <div class="me">
-        <div class="top">
-          <img src="assets/img/arthur.webp" width="64" height="64" alt="Arthur Pedreca">
-          <div><h3>Arthur Pedreca</h3><p>Full-stack developer</p></div>
-        </div>
-        <ul class="facts">
-          <li>Local time <b><span data-k="clock">13:25</span> in São Paulo</b></li>
-          <li>Overlap <b>US business hours, UK afternoons</b></li>
-          <li>Languages <b>Portuguese, English, Spanish</b></li>
-          <li>First reply <b>within 24 hours</b></li>
-        </ul>
-        <div class="cta">
-          <a class="btn primary" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">Hire me on Upwork</a>
-          <a class="btn" href="https://github.com/ArthurPedreca" rel="noopener">GitHub</a>
+        <div class="group" data-reveal>
+          <h3>AI chatbots and agents</h3>
+          <div class="item"><div class="row"><span>FAQ chatbot</span><span>$119</span></div><p>Trained on up to 20 of your pages, in your colours, on your site. Four days.</p></div>
+          <div class="item"><div class="row"><span>Lead chatbot</span><span>349</span></div><p>Up to 100 pages, leads sent to your inbox or CRM, handover to a person. Seven days.</p></div>
+          <div class="item"><div class="row"><span>AI agent</span><span>799</span></div><p>Everything above, plus up to three actions through your own APIs, like bookings. Fourteen days.</p></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="about wrap grid" id="about" aria-labelledby="about-title">
+    <div class="about-side">
+      <h2 id="about-title" data-reveal>About</h2>
+      <dl class="facts" data-reveal style="--i:1">
+        <div><dt class="sr-only">Where</dt><dd>São Paulo, UTC−3</dd></div>
+        <div><dt class="sr-only">Since</dt><dd>Lead developer at Flexiestays since January 2025</dd></div>
+        <div><dt class="sr-only">Languages</dt><dd>Portuguese, English, Spanish</dd></div>
+      </dl>
+    </div>
+    <div class="bio" data-reveal style="--i:1">
+      <p><img class="cap" src="assets/img/arthur.webp" width="640" height="640" alt="Portrait of Arthur Pedreca."><span class="who">I’m Arthur Pedreca,</span> a full-stack developer in São Paulo. Since January 2025 I’ve been lead developer at Flexiestays, a serviced-apartment company in Bournemouth, where I run the website, the Flutter app, the dashboards and Foxie.</p>
+      <p>I also build Aisbar, a shift-handover tool for ICU doctors in Brazil, and I study Artificial Intelligence at FIAP. I use Claude Code every day, so I know where AI-written code tends to break.</p>
+    </div>
+    <dl class="facts-phone">
+      <div><dt class="sr-only">Where</dt><dd>São Paulo, UTC−3</dd></div>
+      <div><dt class="sr-only">Since</dt><dd>Flexiestays since 2025</dd></div>
+      <div><dt class="sr-only">Languages</dt><dd>Portuguese, English, Spanish</dd></div>
+    </dl>
+  </section>
+
+  <section class="contact wrap grid" id="contact" aria-labelledby="contact-title">
+    <div class="contact-col">
+      <h2 id="contact-title" data-reveal><span>Send me the link.</span> I’ll tell you what’s broken.</h2>
+      <form class="send" id="send" action="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" method="get" target="_blank" data-reveal style="--i:1">
+        <label class="sr-only" for="link">Your app’s link</label>
+        <input id="link" name="link" type="url" inputmode="url" placeholder="Your app’s link" autocomplete="url" aria-describedby="send-help">
+        <button type="submit" aria-label="Write to Arthur on Upwork"><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#arrow"/></svg></button>
+      </form>
+      <p class="send-help" id="send-help" aria-live="polite">Opens my Upwork profile with your message copied, ready to paste.</p>
+      <p class="reach" data-reveal style="--i:2">Or find me on <a class="link" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">Upwork</a> and <a class="link" href="https://github.com/ArthurPedreca" rel="noopener">GitHub</a>.</p>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
+<footer class="foot">
+  <p class="foot-name" aria-hidden="true">Arthur Pedreca</p>
+  <div class="foot-line">
     <span>© 2026 Arthur Pedreca</span>
-    <span>The status above comes from my public GitHub activity and is rebuilt every six hours. <a href="https://github.com/ArthurPedreca/ArthurPedreca">See how</a></span>
+    <span>Screenshots from the live Flexiestays product. Sample rows in the audit are invented.</span>
   </div>
 </footer>
 
-<script type="application/json" id="snapshot">{"updated":"2026-10-30T16:39:43.980Z","available":true,"note":"Available for new projects","totalLastYear":2742,"active90":55,"contributions90":345,"days":[{"date":"2026-08-02","count":0},{"date":"2026-08-03","count":4},{"date":"2026-08-04","count":3},{"date":"2026-08-05","count":3},{"date":"2026-08-06","count":2},{"date":"2026-08-07","count":4},{"date":"2026-08-08","count":0},{"date":"2026-08-09","count":0},{"date":"2026-08-10","count":3},{"date":"2026-08-11","count":13},{"date":"2026-08-12","count":8},{"date":"2026-08-13","count":0},{"date":"2026-08-14","count":2},{"date":"2026-08-15","count":0},{"date":"2026-08-16","count":0},{"date":"2026-08-17","count":4},{"date":"2026-08-18","count":6},{"date":"2026-08-19","count":1},{"date":"2026-08-20","count":4},{"date":"2026-08-21","count":5},{"date":"2026-08-22","count":0},{"date":"2026-08-23","count":0},{"date":"2026-08-24","count":1},{"date":"2026-08-25","count":2},{"date":"2026-08-26","count":0},{"date":"2026-08-27","count":1},{"date":"2026-08-28","count":1},{"date":"2026-08-29","count":0},{"date":"2026-08-30","count":0},{"date":"2026-08-31","count":0},{"date":"2026-09-01","count":4},{"date":"2026-09-02","count":3},{"date":"2026-09-03","count":2},{"date":"2026-09-04","count":18},{"date":"2026-09-05","count":0},{"date":"2026-09-06","count":7},{"date":"2026-09-07","count":61},{"date":"2026-09-08","count":0},{"date":"2026-09-09","count":2},{"date":"2026-09-10","count":2},{"date":"2026-09-11","count":7},{"date":"2026-09-12","count":0},{"date":"2026-09-13","count":0},{"date":"2026-09-14","count":12},{"date":"2026-09-15","count":43},{"date":"2026-09-16","count":6},{"date":"2026-09-17","count":4},{"date":"2026-09-18","count":0},{"date":"2026-09-19","count":0},{"date":"2026-09-20","count":0},{"date":"2026-09-21","count":1},{"date":"2026-09-22","count":0},{"date":"2026-09-23","count":2},{"date":"2026-09-24","count":9},{"date":"2026-09-25","count":1},{"date":"2026-09-26","count":0},{"date":"2026-09-27","count":0},{"date":"2026-09-28","count":2},{"date":"2026-09-29","count":3},{"date":"2026-09-30","count":4},{"date":"2026-10-01","count":3},{"date":"2026-10-02","count":3},{"date":"2026-10-03","count":0},{"date":"2026-10-04","count":0},{"date":"2026-10-05","count":0},{"date":"2026-10-06","count":3},{"date":"2026-10-07","count":11},{"date":"2026-10-08","count":1},{"date":"2026-10-09","count":3},{"date":"2026-10-10","count":0},{"date":"2026-10-11","count":0},{"date":"2026-10-12","count":0},{"date":"2026-10-13","count":0},{"date":"2026-10-14","count":3},{"date":"2026-10-15","count":0},{"date":"2026-10-16","count":5},{"date":"2026-10-17","count":0},{"date":"2026-10-18","count":0},{"date":"2026-10-19","count":5},{"date":"2026-10-20","count":8},{"date":"2026-10-21","count":5},{"date":"2026-10-22","count":2},{"date":"2026-10-23","count":9},{"date":"2026-10-24","count":0},{"date":"2026-10-25","count":0},{"date":"2026-10-26","count":2},{"date":"2026-10-27","count":2},{"date":"2026-10-28","count":11},{"date":"2026-10-29","count":9},{"date":"2026-10-30","count":0}]}</script>
-<script src="assets/js/status.js" defer></script>
+<script type="application/json" id="snapshot">{"updated":"2026-10-30T16:42:05.246Z","available":true,"note":"Available for new projects","totalLastYear":2746,"active90":57,"contributions90":349,"days":[{"date":"2026-08-02","count":0},{"date":"2026-08-03","count":4},{"date":"2026-08-04","count":3},{"date":"2026-08-05","count":3},{"date":"2026-08-06","count":2},{"date":"2026-08-07","count":4},{"date":"2026-08-08","count":0},{"date":"2026-08-09","count":0},{"date":"2026-08-10","count":3},{"date":"2026-08-11","count":13},{"date":"2026-08-12","count":8},{"date":"2026-08-13","count":0},{"date":"2026-08-14","count":2},{"date":"2026-08-15","count":0},{"date":"2026-08-16","count":0},{"date":"2026-08-17","count":4},{"date":"2026-08-18","count":6},{"date":"2026-08-19","count":1},{"date":"2026-08-20","count":4},{"date":"2026-08-21","count":5},{"date":"2026-08-22","count":0},{"date":"2026-08-23","count":0},{"date":"2026-08-24","count":1},{"date":"2026-08-25","count":2},{"date":"2026-08-26","count":0},{"date":"2026-08-27","count":1},{"date":"2026-08-28","count":1},{"date":"2026-08-29","count":0},{"date":"2026-08-30","count":0},{"date":"2026-08-31","count":0},{"date":"2026-09-01","count":4},{"date":"2026-09-02","count":3},{"date":"2026-09-03","count":2},{"date":"2026-09-04","count":18},{"date":"2026-09-05","count":0},{"date":"2026-09-06","count":7},{"date":"2026-09-07","count":61},{"date":"2026-09-08","count":0},{"date":"2026-09-09","count":2},{"date":"2026-09-10","count":2},{"date":"2026-09-11","count":7},{"date":"2026-09-12","count":0},{"date":"2026-09-13","count":0},{"date":"2026-09-14","count":12},{"date":"2026-09-15","count":43},{"date":"2026-09-16","count":6},{"date":"2026-09-17","count":4},{"date":"2026-09-18","count":0},{"date":"2026-09-19","count":0},{"date":"2026-09-20","count":0},{"date":"2026-09-21","count":1},{"date":"2026-09-22","count":0},{"date":"2026-09-23","count":2},{"date":"2026-09-24","count":9},{"date":"2026-09-25","count":1},{"date":"2026-09-26","count":0},{"date":"2026-09-27","count":0},{"date":"2026-09-28","count":2},{"date":"2026-09-29","count":3},{"date":"2026-09-30","count":4},{"date":"2026-10-01","count":3},{"date":"2026-10-02","count":3},{"date":"2026-10-03","count":0},{"date":"2026-10-04","count":0},{"date":"2026-10-05","count":0},{"date":"2026-10-06","count":3},{"date":"2026-10-07","count":11},{"date":"2026-10-08","count":1},{"date":"2026-10-09","count":3},{"date":"2026-10-10","count":0},{"date":"2026-10-11","count":0},{"date":"2026-10-12","count":0},{"date":"2026-10-13","count":0},{"date":"2026-10-14","count":2},{"date":"2026-10-15","count":1},{"date":"2026-10-16","count":5},{"date":"2026-10-17","count":0},{"date":"2026-10-18","count":0},{"date":"2026-10-19","count":5},{"date":"2026-10-20","count":8},{"date":"2026-10-21","count":5},{"date":"2026-10-22","count":2},{"date":"2026-10-23","count":9},{"date":"2026-10-24","count":0},{"date":"2026-10-25","count":0},{"date":"2026-10-26","count":2},{"date":"2026-10-27","count":2},{"date":"2026-10-28","count":11},{"date":"2026-10-29","count":9},{"date":"2026-10-30","count":4}]}</script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

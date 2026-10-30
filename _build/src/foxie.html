@@ -1,62 +1,61 @@
 <!-- title: Foxie, an AI concierge for Flexiestays -->
-<!-- desc: Release notes for Foxie, the AI concierge I built for Flexiestays: guests ask in plain English and get live property cards inside the chat. -->
-<p class="crumbs"><a href="../">status</a> / <a href="../#history">history</a> / foxie</p>
-
-<div class="art-head">
-  <p class="eyebrow"><span class="tag blue">SHIPPED</span>&nbsp;&nbsp;Release · 2026</p>
-  <h1>Foxie, an AI concierge for Flexiestays</h1>
-  <p class="lead">Flexiestays runs serviced apartments in Bournemouth, UK. Foxie lets guests ask about them in plain English and answers with things they can tap, not paragraphs.</p>
-  <div class="facts-row">
-    <div>Company<b>Flexiestays · UK</b></div>
-    <div>My role<b>Lead developer</b></div>
-    <div>Built with<b>Vercel AI SDK</b></div>
-    <div>Pattern<b>Tool calling + generative UI</b></div>
+<!-- desc: How Foxie works: guests ask Flexiestays in plain English and get live property cards inside the chat. -->
+<section class="art-top grid wide-pic">
+  <div class="art-top-text">
+  <h1 data-rise>Foxie, an AI concierge for Flexiestays</h1>
+  <p class="lead" data-rise style="--i:1">Flexiestays runs serviced apartments in Bournemouth. Foxie lets guests ask about them in plain English and answers with things they can tap, not paragraphs.</p>
+  <dl class="art-facts" data-rise style="--i:2">
+    <div><dt>Company</dt><dd>Flexiestays, UK</dd></div>
+    <div><dt>My role</dt><dd>Lead developer</dd></div>
+    <div><dt>Built with</dt><dd>Vercel AI SDK</dd></div>
+    <div><dt>Pattern</dt><dd>Tool calling and generative interface</dd></div>
+  </dl>
   </div>
-</div>
+  <figure class="art-top-pic" data-rise style="--i:2">
+    <img class="shot" src="../assets/img/foxie-chat.webp" width="799" height="761" alt="Foxie chat: the guest asks for accommodation and gets two property cards, Tower House and Cliff Heights, each with apartment photos, plus suggested follow-up questions.">
+    <figcaption>Asking for accommodation returns the properties as cards, each with its apartments.</figcaption>
+  </figure>
+</section>
 
 <div class="art">
-  <article>
-    <h2>What shipped</h2>
-    <figure class="shot" style="margin:8px 0 0">
-      <img src="../assets/img/foxie-chat.webp" width="799" height="761" alt="Foxie chat: the guest asks for accommodation and gets two property cards, Tower House and Cliff Heights, each with apartment photos, plus suggested follow-up questions.">
-      <figcaption>Asking for accommodation returns the properties as cards, each with its apartments, plus suggested follow-ups.</figcaption>
-    </figure>
 
-    <h2>How a question becomes an answer</h2>
-    <ol class="updates">
-      <li class="b"><h3>The guest asks</h3><p>“Help me find accommodation”, typed or picked from a suggestion.</p></li>
-      <li class="b"><h3>Foxie calls a tool</h3><p>Instead of answering from memory, the model calls a tool that looks up the properties and their apartments.</p></li>
-      <li class="b"><h3>The answer renders as interface</h3><p>The result streams into the chat as components: property cards with photos, guest and bedroom counts, and a button to explore each building.</p></li>
-      <li class="g"><h3>The next step is one tap away</h3><p>Chips like “Show me Tower House” or “Check availability” keep the conversation moving.</p></li>
+  <section>
+    <h2 data-reveal>How it answers</h2>
+    <ol class="timeline body">
+      <li data-reveal style="--i:1"><h3>The guest asks</h3><p>“Help me find accommodation”, typed or picked from a suggestion.</p></li>
+      <li data-reveal style="--i:2"><h3>Foxie calls a tool</h3><p>Instead of answering from memory, the model calls a tool that looks up the properties and their apartments.</p></li>
+      <li data-reveal style="--i:3"><h3>The answer arrives as interface</h3><p>The result streams into the chat as components: property cards with photos, guest and bedroom counts, and a button to explore each building.</p></li>
+      <li data-reveal style="--i:4"><h3>The next step is one tap away</h3><p>Suggestions like “Show me Tower House” or “Check availability” keep the conversation going.</p></li>
     </ol>
+  </section>
 
-    <h2>Why cards instead of text</h2>
-    <p>Someone choosing where to stay wants to see the place. A card with photos and capacity answers faster than a paragraph. And because the cards are filled by a tool call rather than written by the model, what the guest sees are the real listings.</p>
-    <p>Foxie also says plainly that it is an AI and can make mistakes, right under the input.</p>
-
-    <h2>The rest of the product</h2>
-    <p>Foxie sits on top of everything else I run at Flexiestays: the Nuxt booking website with Cypress tests, the Flutter app for iOS and Android tested with Patrol, and the internal dashboards.</p>
-    <div class="shots">
-      <figure class="shot wide"><img src="../assets/img/flexiestays-site.webp" width="1600" height="800" alt="Flexiestays website home page with a booking search bar over a photo of Bournemouth pier." loading="lazy"><figcaption>The booking website</figcaption></figure>
-      <figure class="shot tall"><img src="../assets/img/flexiestays-app.webp" width="738" height="1523" alt="Flexiestays mobile app home screen with a destination search and a Tower House card." loading="lazy"><figcaption>The Flutter app</figcaption></figure>
+  <section>
+    <h2 data-reveal>Why cards</h2>
+    <div class="body" data-reveal style="--i:1">
+      <p>Someone choosing where to stay wants to see the place. A card with photos and capacity answers faster than a paragraph. And because the cards are filled by a tool call rather than written by the model, what the guest sees are the real listings.</p>
+      <p>Foxie also says plainly, under the input, that it is an AI and can make mistakes.</p>
     </div>
+  </section>
 
-    <div class="next">
-      <a href="open-database.html"><svg class="i"><use href="#back"/></svg> Previous<b>Client records readable with the public key</b></a>
-      <a href="../#history" style="text-align:right">Back <svg class="i"><use href="#arrow"/></svg><b>All history</b></a>
+  <section>
+    <h2 data-reveal>Around it</h2>
+    <div class="body">
+      <figure class="big-shot" data-reveal style="--i:1">
+        <img class="shot" src="../assets/img/site.webp" width="1427" height="951" alt="The Flexiestays home page with a booking search over a photo of Bournemouth pier.">
+      </figure>
+      <div class="two-shots">
+        <figure data-reveal style="--i:2"><img class="shot" src="../assets/img/app.webp" width="738" height="922" alt="The Flexiestays app home screen."></figure>
+        <figure data-reveal style="--i:3"><img class="shot" src="../assets/img/property.webp" width="588" height="735" alt="A Flexiestays apartment page on the website."></figure>
+      </div>
+      <p class="cap">Foxie sits on the Nuxt booking website, next to the Flutter app and the internal dashboards I also run.</p>
     </div>
-  </article>
-
-  <aside>
-    <div class="box">
-      <h4>Want one on your site?</h4>
-      <p>I build chatbots that answer from your own content, capture leads and hand over to a person when they aren’t sure. You own the code and the AI account.</p>
-      <dl>
-        <dt>Service</dt><dd>AI chatbots and agents</dd>
-        <dt>Price</dt><dd>From $119, fixed</dd>
-        <dt>Models</dt><dd>Claude or OpenAI</dd>
-      </dl>
-      <a class="btn primary" href="https://www.upwork.com/freelancers/~01f52910ffb0d32b70" rel="noopener">Start on Upwork</a>
-    </div>
-  </aside>
+  </section>
 </div>
+
+<section class="art-end grid">
+  <div class="art-end-text">
+    <p data-reveal>Want one that answers from your own content? Chatbots start at $119.</p>
+    <a class="action" href="{upwork}" rel="noopener" data-reveal style="--i:1">Start on Upwork</a>
+  </div>
+  <figure class="art-end-pic" data-reveal><img class="shot" src="../assets/img/arthur-45.webp" width="640" height="800" alt="Arthur Pedreca."></figure>
+</section>
