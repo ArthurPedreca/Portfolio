@@ -17,7 +17,7 @@ HEAD = """<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../assets/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/site.css?v=dr1">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -39,7 +39,7 @@ FOOT = """</main>
   <p class="foot-name" aria-hidden="true">Arthur Pedreca</p>
   <div class="foot-line"><span>© 2026 Arthur Pedreca</span><a class="link" href="../">Back to the front page</a></div>
 </footer>
-<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/site.js?v=dr1" defer></script>
 </body>
 </html>
 """
